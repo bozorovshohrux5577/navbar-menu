@@ -1,0 +1,271 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: silver;
+}
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+}
+.navbarMenu{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ul{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(2, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li{
+    list-style-type: none;
+    color: red;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+.icon{
+    position: absolute;
+    font-weight: 900;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    border-radius: 50%;
+    padding: 8px;
+}
+li:hover .icon{
+    transform: translateY(30px);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 8px silver;
+    border-radius: 50%;
+    background-color: white;
+    padding: 8px;
+}
+li::after{
+content: '';
+width: 15px;
+height: 15px;
+background-color: rgb(2, 15, 15);
+border-bottom-left-radius: 150%;
+box-shadow: silver -3px 5px 1px 1px;
+opacity: 0;
+
+}
+li:hover::after{
+    opacity: 1;
+    position: absolute;
+    top: 55px;
+    margin-left: 85px;
+    transition: 0.1s;
+}
+li::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: rgb(2, 15, 15);
+    border-bottom-right-radius: 150%;
+    box-shadow: silver 3px 5px 1px 1px;
+    opacity: 0;
+    }
+    li:hover::before{
+        opacity: 1;
+        position: absolute;
+        top: 55px;
+        margin-left: -85px;
+        transition: 0.1s;
+    }
+    h1{
+        font-size: 20px;
+        font-family: sans-serif;
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    li:hover h1{
+        transform: translateY(-17px);
+        opacity: 1;
+        transition: all 0.2s;
+    }
+    .saidbar{
+        width: 25%;
+        height: 85.5vh;
+        background-image: url(./img/1614762776_7-p-derevyannii-fon-8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0px;
+        border-radius: 0 100px 0 0;
+        border-right: solid 15px rgb(78, 74, 74);
+    }
+    .saidContent{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        width: 270px;
+        height: 35px;
+        position: relative;
+        top: 50px;
+        border: transparent;
+        background-color: rgb(2, 15, 15);
+        box-shadow: black 3px 2px 8px 0.1px;
+        outline: none;
+        border-radius: 10px;
+        padding-left: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    .saidLi{
+        width: 100px;
+        height: 100px;
+        background:white;
+        box-shadow: inset black 14px 12px 40px 1px;
+        border-radius: 100%;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        animation: ball 1.2s  infinite ease-in-out;
+        z-index: 1;
+    }
+    @keyframes ball{
+        0%{
+            position: absolute;
+            top: 100px;
+            animation-timing-function: ease-in-out;
+        }
+        50%{
+          position: absolute;
+          top: 400px;
+          animation-timing-function: ease-out;
+         
+        }
+        100%{
+            position: absolute;
+            top: 100px;
+            animation-timing-function: ease;
+          }
+    }
+.shadow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.212);
+    position: absolute;
+    top: 470px;
+    left: 130px;
+    transform: rotateX(65deg);
+    filter: blur(10px);
+    box-shadow:inset black 0 0 10px 3px;
+    animation: shadow 1.2s ease-in infinite;
+}
+@keyframes shadow{
+    0%{
+        filter: blur(10px);
+        box-shadow: rgba(0, 0, 0, 0.308) 0 0 6px 50px;
+        position: absolute;
+        transition: ease-in-out;
+       background-color: rgba(0, 0, 0, 0.568);
+    }
+    50%{
+        
+       background-color:rgba(0, 0, 0, 0.788);
+        filter: blur(10px);
+        position: absolute;
+        transition: ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.308) 0 0 6px 20px;
+    }
+    100%{  
+       background-color: rgba(0, 0, 0, 0.568);
+        filter: blur(10px);
+        box-shadow: rgba(0, 0, 0, 0.308) 0 0 6px 50px;
+        position: absolute;
+        transition: ease-in-out;
+    }
+}
+    ::placeholder{
+        color: silver;
+        font-size: 20px;
+    }
+    .cubeBox{
+        width: 700px;
+        height: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        margin: 90px 500px;
+    }
+    .cube{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        animation: name 16s linear infinite;
+    }
+    @keyframes name{
+        0%{
+            transform: rotateX(-30deg) rotateY(0deg);
+        }
+        100%{
+            transform: rotateX(-360deg) rotateY(360deg)rotateX(-360deg);
+        }
+    }
+    .cube > div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+    }
+    .cube >div > span{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background:linear-gradient(50deg, rgba(255, 0, 0, 0.616),rgba(0, 0, 0, 0.925), rgba(0, 0, 255, 0.74),rgba(0, 128, 0, 0.76),rgba(255, 255, 0, 0.651));
+        transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+    }
+.cube> div::before{
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(50deg, rgba(255, 0, 0, 0.616),rgba(0, 0, 0, 0.925), rgba(0, 0, 255, 0.74),rgba(0, 128, 0, 0.76),rgba(255, 255, 0, 0.651));
+        top: 0;
+        left: 0;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+    .cube> div::after{
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        left: 0;
+        transform: rotateX(90deg) translateZ(-230px);
+        filter: blur(30px);
+    }
+    input:focus ::placeholder{
+        opacity: 0;
+    }
